@@ -1,4 +1,4 @@
-import Phaser from "phaser";
+import * as Phaser from "phaser";
 
 export default class GameScene extends Phaser.Scene {
   private player!: Phaser.GameObjects.Rectangle;
@@ -116,7 +116,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   createStarfield() {
-    const particles = this.add.particles(0, 0, "white", {
+    this.stars = this.add.particles(0, 0, "white", {
       x: { min: 0, max: this.scale.width },
       y: -10,
       lifespan: 4000,
@@ -126,8 +126,6 @@ export default class GameScene extends Phaser.Scene {
       frequency: 100,
       blendMode: "ADD",
     });
-
-    this.stars = particles.emitters.getByName('default') || particles.emitters.list[0];
   }
 
   createPlayer() {
@@ -295,7 +293,7 @@ export default class GameScene extends Phaser.Scene {
     bullet.setStrokeStyle(2, 0xff006e, 0.8);
 
     // Particle trail
-    const particles = this.add.particles(bullet.x, bullet.y, "white", {
+    const emitter = this.add.particles(bullet.x, bullet.y, "white", {
       speed: 20,
       scale: { start: 0.5, end: 0 },
       blendMode: "ADD",
@@ -303,7 +301,6 @@ export default class GameScene extends Phaser.Scene {
       tint: 0xff006e,
     });
 
-    const emitter = particles.emitters.getByName('default') || particles.emitters.list[0];
     emitter.startFollow(bullet);
   }
 
