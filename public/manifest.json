@@ -1,0 +1,24 @@
+{
+  "name": "Space Shooter - Epic Shoot'em Up",
+  "short_name": "Space Shooter",
+  "description": "An engaging vertical shoot'em up game with stunning visuals and smooth gameplay",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
