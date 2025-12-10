@@ -19,7 +19,7 @@ export default class GameScene extends Phaser.Scene {
   private healthText!: Phaser.GameObjects.Text;
   private waveText!: Phaser.GameObjects.Text;
   private lastFired: number = 0;
-  private fireRate: number = 250;
+  private fireRate: number = 150;
   private wave: number = 1;
   private enemiesInWave: number = 5;
   private enemiesDefeated: number = 0;
@@ -564,7 +564,7 @@ export default class GameScene extends Phaser.Scene {
         break;
       case "weapon":
         const oldFireRate = this.fireRate;
-        this.fireRate = 100;
+        this.fireRate = 75;
         this.showPowerupText("Rapid Fire!");
         this.time.delayedCall(5000, () => {
           this.fireRate = oldFireRate;

@@ -7,12 +7,12 @@ A modern, engaging vertical shoot'em up game built with Next.js, TypeScript, and
 ### Game Mechanics
 - **Player Controls**: Smooth ship movement with keyboard (Arrow keys/WASD) or touch controls
 - **Player Ship**: Distinctive cyan arrow-shaped spaceship with wings and engine glow
-- **Combat System**: Automatic continuous fire - no button pressing needed!
+- **Combat System**: Automatic continuous rapid fire - no button pressing needed! Bullets stream continuously.
 - **Enemy Waves**: Progressive difficulty with 3 distinct enemy types (scout/cruiser/battleship)
 - **Powerup System**:
   - Blue Shield: Absorbs one hit
   - Green Speed Boost: Increases movement speed for 5 seconds
-  - Pink Rapid Fire: Even faster automatic shooting for 5 seconds
+  - Pink Rapid Fire: Ultra-fast stream of bullets for 5 seconds (2x faster!)
 
 ### Visual Effects
 - **Intuitive Design**: Player ship (arrow pointing up) vs enemy ships (geometric shapes pointing down/rotating)
